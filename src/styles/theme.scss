@@ -1,0 +1,22 @@
+// 浅色主题变量
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #303133;
+  --border-color: #dcdfe6;
+  --menu-bg-color: #ffffff;
+  --header-bg-color: #ffffff;
+}
+
+// 深色主题变量
+html.dark {
+  --bg-color: #141414;
+  --text-color: #e5eaf3;
+  --border-color: #363637;
+  --menu-bg-color: #1d1e1f;
+  --header-bg-color: #1d1e1f;
+
+  // Element Plus 暗黑模式
+  --el-bg-color: var(--bg-color);
+  --el-text-color-primary: var(--text-color);
+  --el-border-color: var(--border-color);
+} 
