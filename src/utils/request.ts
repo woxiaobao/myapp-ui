@@ -3,7 +3,7 @@ import { ElMessage } from 'element-plus'
 
 const request = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
-  timeout: 15000
+  timeout: 30000
 })
 
 // 请求拦截器
@@ -21,7 +21,6 @@ request.interceptors.request.use(
 request.interceptors.response.use(
   (response) => {
     const res = response.data
-    // 这里可以根据后端的响应结构进行调整
     return res
   },
   (error) => {

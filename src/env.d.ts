@@ -1,15 +1,6 @@
 /// <reference types="vite/client" />
 
-interface ImportMetaEnv {
-  readonly VITE_API_BASE_URL: string
+declare module 'element-plus/dist/locale/zh-cn.mjs' {
+  const zhCn: any;
+  export default zhCn;
 }
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv
-}
-
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
-  export default component
-} 

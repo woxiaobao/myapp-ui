@@ -33,6 +33,19 @@
             <el-menu-item index="/trade/upload">交易记录上传</el-menu-item>
             <el-menu-item index="/trade/statistics">交易记录统计</el-menu-item>
           </el-sub-menu>
+
+          <el-sub-menu index="/redis">
+            <template #title>
+              <el-icon><Connection /></el-icon>
+              <span>Redis实例</span>
+            </template>
+            <el-menu-item index="/redis/string">String类型</el-menu-item>
+            <el-menu-item index="/redis/list">List类型</el-menu-item>
+            <el-menu-item index="/redis/hash">Hash类型</el-menu-item>
+            <el-menu-item index="/redis/set">Set类型</el-menu-item>
+            <el-menu-item index="/redis/zset">ZSet类型</el-menu-item>
+            <el-menu-item index="/redis/lock">分布式锁</el-menu-item>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
       
@@ -47,7 +60,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { Moon, Sunny, Document } from '@element-plus/icons-vue'
+import { Moon, Sunny, Document, Connection } from '@element-plus/icons-vue'
 import { isDark, toggleDark, saveTheme, initTheme } from '@/utils/theme'
 
 const route = useRoute()

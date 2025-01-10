@@ -1,11 +1,18 @@
+interface StatusConfig {
+  [key: string]: {
+    label: string;
+    type: string;
+  };
+}
+
 // 交易方向
 export const DIRECTION_OPTIONS = [
   { label: '收入', value: 'IN' },
   { label: '支出', value: 'OUT' }
-]
+] as const
 
 // 交易状态
-export const STATUS_MAP = {
+export const STATUS_MAP: StatusConfig = {
   SUCCESS: { label: '成功', type: 'success' },
   PENDING: { label: '处理中', type: 'warning' },
   FAILED: { label: '失败', type: 'danger' }
@@ -17,4 +24,4 @@ export const PAYMENT_METHOD_OPTIONS = [
   { label: '微信', value: 'WECHAT' },
   { label: '银行卡', value: 'BANK_CARD' },
   { label: '现金', value: 'CASH' }
-] 
+] as const 

@@ -29,4 +29,18 @@ export interface TradeRecordQuery {
   pageNum?: number;
   pageSize?: number;
   offset?: number;
-} 
+}
+
+export interface PaginatedResponse<T> {
+  records: T[];
+  total: number;
+}
+
+export interface StatusMap {
+  [key: string]: {
+    label: string;
+    type: string;
+  };
+}
+
+export interface ExportResponse extends Blob {}

@@ -1,0 +1,21 @@
+name: myapp-ui
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: myapp-ui
+    ports:
+      - "80:80"
+    restart: always
+    networks:
+      - myapp-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  myapp-network:
+    driver: bridge 
